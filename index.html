@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Procurement · Política de Transporte 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-base:    #F0F1F5;
+  --bg-surface: #EAEBF0;
+  --bg-card-s:  #FFFFFF;
+  --bg-elev:    #E4E6EC;
+  --bg-deep:    #DDE0E8;
+  --gold:       #4A5568;  --gold-dim:rgba(74,85,104,0.09);  --gold-glow:rgba(74,85,104,0.16);
+  --sky:        #4A7FA0;  --sky-dim:rgba(74,127,160,0.10);
+  --emerald:    #3D7A60;  --emerald-dim:rgba(61,122,96,0.10);
+  --violet:     #6B5E8A;  --violet-dim:rgba(107,94,138,0.10);
+  --coral:      #8A4848;  --coral-dim:rgba(138,72,72,0.10);
+  --teal:       #3A7870;  --teal-dim:rgba(58,120,112,0.10);
+  --amber:      #7A6030;  --amber-dim:rgba(122,96,48,0.10);
+  --text-primary:#1E2130; --text-secondary:#5A5F72; --text-muted:#9298A8;
+  --border:rgba(0,0,0,0.07); --border-hi:rgba(74,85,104,0.28);
+  --radius:12px; --radius-sm:8px; --radius-xs:5px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg-base);color:var(--text-primary);font-family:'DM Sans',sans-serif;min-height:100vh;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.018'/%3E%3C/svg%3E")}
+
+/* HEADER */
+.header{position:sticky;top:0;z-index:200;background:rgba(240,241,245,0.96);backdrop-filter:blur(24px);border-bottom:1px solid var(--border);padding:0 32px;display:flex;align-items:center;justify-content:space-between;height:60px}
+.hbrand{display:flex;align-items:center;gap:12px}
+.hlogo{width:32px;height:32px;background:var(--gold);border-radius:7px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:16px;color:#F0F1F5;font-weight:900;flex-shrink:0}
+.htitle{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:3px;color:var(--text-primary);line-height:1}
+.hsub{font-size:9px;color:var(--text-muted);letter-spacing:2.2px;text-transform:uppercase;font-weight:600;margin-top:3px}
+.hright{display:flex;align-items:center;gap:10px}
+.sdw{display:flex;align-items:center;gap:6px;font-size:10px;color:var(--text-muted);font-family:'JetBrains Mono',monospace}
+.sdot{width:5px;height:5px;border-radius:50%;background:var(--emerald);animation:pulse 2.4s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.2}}
+.btn{display:flex;align-items:center;gap:7px;border-radius:var(--radius-sm);padding:7px 15px;font-family:'DM Sans',sans-serif;font-weight:600;font-size:13px;cursor:pointer;transition:all .18s;border:1px solid var(--border)}
+.btn-g{background:var(--bg-elev);color:var(--text-primary)}.btn-g:hover{border-color:var(--gold);color:var(--gold)}
+.btn-p{background:var(--bg-elev);color:var(--text-primary);border-color:var(--border-hi);font-weight:700}
+.btn-p:hover{transform:translateY(-1px);border-color:var(--gold);color:var(--gold);box-shadow:0 4px 16px var(--gold-glow)}
+.btn-p:active{transform:scale(.97)}.btn-p svg{transition:transform .45s}.btn-p:hover svg{transform:rotate(180deg)}
+
+/* MAIN */
+.main{padding:24px 32px;max-width:1680px;margin:0 auto;position:relative;z-index:1}
+
+/* KPIs */
+.kpi-strip{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:24px}
+.kc{background:var(--bg-card-s);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;position:relative;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
+.kc::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:var(--kc)}
+.kc::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at top left,var(--kg,transparent) 0%,transparent 70%);pointer-events:none}
+.kc.k0{--kc:var(--gold);--kg:rgba(74,85,104,0.04)}.kc.k1{--kc:var(--teal);--kg:rgba(58,120,112,0.04)}
+.kc.k2{--kc:var(--emerald);--kg:rgba(61,122,96,0.04)}.kc.k3{--kc:var(--coral);--kg:rgba(138,72,72,0.04)}
+.kc.k4{--kc:var(--violet);--kg:rgba(107,94,138,0.04)}.kc.k5{--kc:var(--sky);--kg:rgba(74,127,160,0.04)}
+.kl{font-size:9px;text-transform:uppercase;letter-spacing:1.8px;color:var(--text-muted);font-weight:700;margin-bottom:6px}
+.kv{font-family:'Bebas Neue',sans-serif;font-size:38px;line-height:1;color:var(--kc);margin-bottom:3px}
+.ks{font-size:11px;color:var(--text-secondary)}
+
+/* SECTION HEADER */
+.sh{display:flex;align-items:center;justify-content:space-between;margin-bottom:13px}
+.st{display:flex;align-items:center;gap:9px;font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:2.8px;color:var(--text-primary)}
+.sa{width:3px;height:16px;border-radius:2px;background:var(--gold)}
+.fb{display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.fbtn{padding:4px 13px;border-radius:20px;border:1px solid var(--border);background:transparent;color:var(--text-secondary);font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;cursor:pointer;transition:all .15s}
+.fbtn.on{border-color:var(--gold);color:var(--gold);background:var(--gold-dim)}
+.fbtn:hover:not(.on){border-color:var(--text-secondary);color:var(--text-primary)}
+
+/* GANTT */
+.gw{background:var(--bg-card-s);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:24px;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
+.gs{overflow-x:auto}
+.gt{width:100%;border-collapse:collapse;min-width:1280px}
+.gt thead th{background:var(--bg-deep);padding:9px 13px;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1.7px;color:var(--text-muted);border-bottom:1px solid var(--border);white-space:nowrap}
+.gt thead th.mh{text-align:center;font-family:'JetBrains Mono',monospace;border-left:1px solid var(--border)}
+.gt thead th.mh.cur{color:var(--gold);background:var(--gold-dim)}
+.gr{border-bottom:1px solid var(--border);transition:background .12s}
+.gr:hover{background:rgba(0,0,0,0.016)}.gr:last-child{border-bottom:none}
+.gr td{padding:10px 13px;vertical-align:middle;font-size:13px}
+.gr td.mc{border-left:1px solid var(--border);text-align:center;padding:0 2px}
+.gr td.mc.cur{background:var(--gold-dim)}
+.iname{font-weight:600;cursor:pointer;transition:color .15s}.iname:hover{opacity:.75}
+.ptag{display:inline-block;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.4px}
+.p-critical{background:var(--coral-dim);color:var(--coral);border:1px solid rgba(138,72,72,.28)}
+.p-high{background:var(--amber-dim);color:var(--amber);border:1px solid rgba(122,96,48,.26)}
+.p-medium{background:var(--gold-dim);color:var(--gold);border:1px solid var(--border-hi)}
+.p-low{background:var(--emerald-dim);color:var(--emerald);border:1px solid rgba(61,122,96,.26)}
+.stag{display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600;white-space:nowrap}
+.stag::before{content:'';width:5px;height:5px;border-radius:50%}
+.s-planning{background:var(--sky-dim);color:var(--sky)}.s-planning::before{background:var(--sky)}
+.s-active{background:var(--teal-dim);color:var(--teal)}.s-active::before{background:var(--teal);animation:pulse 1.5s infinite}
+.s-review{background:var(--violet-dim);color:var(--violet)}.s-review::before{background:var(--violet)}
+.s-done{background:var(--emerald-dim);color:var(--emerald)}.s-done::before{background:var(--emerald)}
+.s-hold{background:var(--coral-dim);color:var(--coral)}.s-hold::before{background:var(--coral)}
+.s-atrasada{background:rgba(138,72,72,0.14);color:var(--coral);border:1px solid rgba(138,72,72,0.30)}.s-atrasada::before{background:var(--coral);animation:pulse 1s infinite}
+.s-riesgo{background:rgba(122,96,48,0.14);color:var(--amber);border:1px solid rgba(122,96,48,0.28)}.s-riesgo::before{background:var(--amber);animation:pulse 1.5s infinite}
+.cpill{display:inline-block;padding:1px 7px;border-radius:3px;font-size:10px;font-weight:600;background:var(--bg-deep);border:1px solid var(--border);color:var(--text-secondary);margin:1px 2px}
+.gbw{width:100%;height:22px;position:relative;display:flex;align-items:center}
+.gb{position:absolute;height:14px;border-radius:3px;opacity:.85;transition:opacity .2s,transform .2s;cursor:pointer}
+.gb:hover{opacity:1;transform:scaleY(1.2)}
+.ring{width:34px;height:34px;position:relative;flex-shrink:0}
+.ring svg{transform:rotate(-90deg)}
+.ring-txt{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:8px;font-weight:700;font-family:'JetBrains Mono',monospace}
+
+/* INITIATIVE CARDS */
+.icards{display:grid;gap:11px;margin-bottom:26px}
+.ic{background:var(--bg-card-s);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:border-color .2s,box-shadow .2s;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
+.ic:hover{border-color:var(--border-hi);box-shadow:0 4px 16px rgba(0,0,0,0.08)}
+.ic-hdr{display:grid;grid-template-columns:26px 1fr auto auto auto 138px 98px auto auto;align-items:center;gap:11px;padding:12px 16px;cursor:pointer;user-select:none}
+.ic-num{font-family:'Bebas Neue',sans-serif;font-size:20px;color:var(--text-muted);line-height:1}
+.ic-ta{overflow:hidden}
+.ic-name{font-weight:600;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ic-meta{font-size:11px;color:var(--text-secondary);margin-top:2px}
+.chevron{color:var(--text-muted);transition:transform .2s;flex-shrink:0}
+.ic.open .chevron{transform:rotate(180deg)}
+.ic-body{display:none;grid-template-columns:1fr 1fr 1fr;border-top:1px solid var(--border)}
+.ic.open .ic-body{display:grid}
+.col{padding:16px 18px;border-right:1px solid var(--border)}
+.col:last-child{border-right:none}
+.col-lbl{font-size:9px;text-transform:uppercase;letter-spacing:1.9px;color:var(--text-muted);font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:6px}
+
+/* FIELDS */
+.ef{background:var(--bg-elev);border:1px solid var(--border);border-radius:var(--radius-sm);padding:8px 11px;color:var(--text-primary);font-family:'DM Sans',sans-serif;font-size:13px;width:100%;transition:border-color .18s;outline:none}
+.ef:focus{border-color:var(--gold);box-shadow:0 0 0 3px var(--gold-dim)}
+select.ef{cursor:pointer;appearance:none}
+textarea.ef{min-height:70px;resize:vertical}
+
+/* PROGRESS */
+.pbar-w{background:var(--bg-elev);border-radius:4px;height:5px;overflow:hidden;margin-top:5px}
+.pbar-f{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--gold),var(--teal));transition:width .45s}
+input[type=range].psl{width:100%;-webkit-appearance:none;background:transparent;margin-top:8px}
+input[type=range].psl::-webkit-slider-runnable-track{background:var(--bg-elev);height:4px;border-radius:4px}
+input[type=range].psl::-webkit-slider-thumb{-webkit-appearance:none;width:14px;height:14px;border-radius:50%;background:var(--gold);margin-top:-5px;cursor:pointer}
+.xbtn{background:var(--coral-dim);border:1px solid rgba(138,72,72,.22);color:var(--coral);border-radius:5px;padding:4px 10px;font-size:11px;font-weight:600;cursor:pointer;transition:all .18s;flex-shrink:0}
+.xbtn:hover{background:rgba(138,72,72,.18)}
+
+/* ── NEXT STEPS BULLETS ──────────────────────────────── */
+.ns-list{margin-bottom:4px}
+.ns-item{display:flex;align-items:flex-start;gap:8px;padding:6px 8px;border-radius:var(--radius-xs);margin-bottom:4px;background:var(--bg-deep);border:1px solid var(--border)}
+.ns-done-hide{display:none}
+.ns-done-show{opacity:.5}
+.ns-check{flex-shrink:0;width:16px;height:16px;border-radius:3px;border:1.5px solid var(--border);background:var(--bg-elev);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .15s;margin-top:1px}
+.ns-check.checked{background:var(--emerald);border-color:var(--emerald)}
+.ns-check.checked::after{content:'✓';font-size:10px;color:#fff;font-weight:700;line-height:1}
+.ns-check:hover:not(.checked){border-color:var(--emerald)}
+.ns-txt{flex:1;background:transparent;border:none;outline:none;color:var(--text-primary);font-family:'DM Sans',sans-serif;font-size:12px;line-height:1.5;resize:none;overflow:hidden;min-height:18px;padding:0}
+.ns-txt.struck{color:var(--text-muted);text-decoration:line-through}
+.ns-del{background:none;border:none;cursor:pointer;color:var(--text-muted);font-size:13px;padding:0 2px;transition:color .15s;flex-shrink:0;line-height:1;margin-top:1px}
+.ns-del:hover{color:var(--coral)}
+.ns-add-btn{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;background:var(--bg-deep);border:1px dashed var(--border);border-radius:var(--radius-xs);padding:7px;color:var(--text-muted);font-family:'DM Sans',sans-serif;font-size:11px;cursor:pointer;transition:all .15s;margin-top:4px}
+.ns-add-btn:hover{border-color:var(--gold);color:var(--gold)}
+.ns-tog{display:flex;align-items:center;justify-content:center;gap:5px;width:100%;background:transparent;border:none;color:var(--text-muted);font-family:'DM Sans',sans-serif;font-size:10px;cursor:pointer;padding:4px;margin-top:2px;transition:color .15s}
+.ns-tog:hover{color:var(--gold)}
+
+/* SUBTASK IN CARD */
+.sub-item{background:var(--bg-deep);border:1px solid var(--border);border-radius:var(--radius-xs);padding:10px 12px;margin-bottom:7px}
+.sub-item:last-child{margin-bottom:0}
+.sub-r1{display:grid;grid-template-columns:1fr auto auto;gap:8px;align-items:center;margin-bottom:8px}
+.sub-ti{background:transparent;border:none;outline:none;color:var(--text-primary);font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;width:100%;border-bottom:1px dashed var(--border);padding-bottom:3px;transition:border-color .15s}
+.sub-ti:focus{border-bottom-color:var(--gold)}
+.sub-del{background:none;border:none;cursor:pointer;color:var(--text-muted);font-size:14px;line-height:1;transition:color .15s;padding:0 2px}
+.sub-del:hover{color:var(--coral)}
+.sub-r2{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px;align-items:end}
+.sub-dlbl{font-size:9px;text-transform:uppercase;letter-spacing:1.3px;color:var(--text-muted);font-weight:700;margin-bottom:3px}
+.sub-prow{display:flex;align-items:center;justify-content:space-between;margin-bottom:3px}
+.sub-pn{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:700}
+.sub-st{font-size:9px;color:var(--text-muted)}
+.sub-bw{background:var(--bg-elev);border-radius:3px;height:4px;overflow:hidden;margin-bottom:3px}
+.sub-bf{height:100%;border-radius:3px;background:linear-gradient(90deg,var(--gold),var(--teal));transition:width .3s}
+input[type=range].ssl{width:100%;-webkit-appearance:none;background:transparent}
+input[type=range].ssl::-webkit-slider-runnable-track{background:var(--bg-elev);height:3px;border-radius:3px}
+input[type=range].ssl::-webkit-slider-thumb{-webkit-appearance:none;width:11px;height:11px;border-radius:50%;background:var(--gold);margin-top:-4px;cursor:pointer}
+.qw-tog{display:inline-flex;align-items:center;gap:4px;cursor:pointer;user-select:none;font-size:10px;color:var(--text-secondary);transition:color .15s}
+.qw-tog input{display:none}
+.qw-box{width:13px;height:13px;border-radius:3px;border:1px solid var(--border);background:var(--bg-elev);display:flex;align-items:center;justify-content:center;transition:all .15s;flex-shrink:0}
+.qw-tog input:checked+.qw-box{background:var(--violet);border-color:var(--violet)}
+.qw-tog input:checked+.qw-box::after{content:'✓';font-size:8px;color:#fff;font-weight:700}
+.qw-tog:hover{color:var(--violet)}
+.add-sub-btn{display:flex;align-items:center;justify-content:center;gap:6px;width:100%;background:var(--bg-deep);border:1px dashed var(--border);border-radius:var(--radius-xs);padding:8px;color:var(--text-muted);font-family:'DM Sans',sans-serif;font-size:12px;cursor:pointer;transition:all .15s;margin-top:7px}
+.add-sub-btn:hover{border-color:var(--gold);color:var(--gold)}
+
+/* SUBTASK PANEL */
+.sub-panel{background:var(--bg-card-s);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;margin-bottom:26px;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
+.sp-hdr{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--border);background:var(--bg-elev)}
+.sp-title{display:flex;align-items:center;gap:10px;font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:2.5px;color:var(--text-primary)}
+.sub-tbl{width:100%;border-collapse:collapse;min-width:980px}
+.sub-tbl thead th{background:var(--bg-deep);padding:8px 14px;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1.6px;color:var(--text-muted);border-bottom:1px solid var(--border);white-space:nowrap}
+.sub-tbl thead th:first-child{padding-left:18px}
+.sub-row{border-bottom:1px solid var(--border);transition:background .12s}
+.sub-row:hover{background:rgba(0,0,0,.016)}.sub-row:last-child{border-bottom:none}
+.sub-row td{padding:10px 14px;font-size:12px;vertical-align:middle}
+.sub-row td:first-child{padding-left:18px}
+.sib{display:inline-block;padding:2px 8px;border-radius:4px;font-size:10px;font-weight:600;white-space:nowrap}
+.sbar{display:flex;align-items:center;gap:8px}
+.strack{flex:1;background:var(--bg-deep);border-radius:3px;height:5px;overflow:hidden}
+.sfill{height:100%;border-radius:3px;transition:width .35s}
+.spct{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;min-width:30px;text-align:right}
+.stage-pill{display:inline-block;padding:2px 8px;border-radius:20px;font-size:10px;font-weight:600}
+.sp-done{background:var(--emerald-dim);color:var(--emerald);border:1px solid rgba(61,122,96,.26)}
+.sp-act{background:var(--teal-dim);color:var(--teal);border:1px solid rgba(58,120,112,.26)}
+.sp-pend{background:var(--bg-deep);color:var(--text-muted);border:1px solid var(--border)}
+.qw-flag{display:inline-flex;align-items:center;gap:3px;font-size:9px;font-weight:700;background:var(--violet-dim);color:var(--violet);border-radius:3px;padding:1px 6px;letter-spacing:.5px;text-transform:uppercase;border:1px solid rgba(107,94,138,.26)}
+
+/* MODAL */
+.mov{position:fixed;inset:0;background:rgba(30,33,48,.5);backdrop-filter:blur(10px);z-index:1000;display:none;align-items:center;justify-content:center}
+.mov.open{display:flex}
+.modal{background:#fff;border:1px solid var(--border-hi);border-radius:14px;padding:26px;width:680px;max-width:96vw;max-height:92vh;overflow-y:auto;box-shadow:0 24px 60px rgba(0,0,0,.14);animation:sup .25s ease}
+@keyframes sup{from{transform:translateY(18px);opacity:0}to{transform:translateY(0);opacity:1}}
+.m-title{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2.5px;color:var(--gold);margin-bottom:18px;display:flex;align-items:center;gap:10px}
+.mg{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.mf{display:flex;flex-direction:column;gap:5px}.mf.full{grid-column:1/-1}
+.mlbl{font-size:10px;text-transform:uppercase;letter-spacing:1.2px;color:var(--text-muted);font-weight:700}
+.m-acts{display:flex;justify-content:flex-end;gap:9px;margin-top:18px}
+.btn-cx{padding:8px 18px;border-radius:var(--radius-sm);border:1px solid var(--border);background:transparent;color:var(--text-secondary);font-family:'DM Sans',sans-serif;font-weight:600;font-size:13px;cursor:pointer;transition:all .18s}
+.btn-cx:hover{border-color:var(--text-secondary);color:var(--text-primary)}
+.btn-sv{padding:8px 22px;border-radius:var(--radius-sm);border:1px solid var(--border-hi);background:var(--bg-elev);color:var(--text-primary);font-family:'DM Sans',sans-serif;font-weight:700;font-size:13px;cursor:pointer;transition:all .18s}
+.btn-sv:hover{border-color:var(--gold);color:var(--gold)}
+
+/* TOAST */
+.toast{position:fixed;bottom:22px;right:22px;background:#fff;border:1px solid var(--border-hi);border-radius:var(--radius-sm);padding:10px 16px;display:flex;align-items:center;gap:9px;font-size:13px;font-weight:500;color:var(--gold);z-index:2000;transform:translateY(55px);opacity:0;transition:all .28s ease;pointer-events:none;box-shadow:0 4px 20px rgba(0,0,0,0.10)}
+.toast.show{transform:translateY(0);opacity:1}
+.empty-s{text-align:center;padding:50px 20px;color:var(--text-muted);font-size:13px}
+
+@media(max-width:1200px){
+  .kpi-strip{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:1100px){
+  .ic-body{grid-template-columns:1fr}
+  .col{border-right:none;border-bottom:1px solid var(--border)}
+  .ic-hdr{grid-template-columns:26px 1fr auto auto 80px}
+  .ic-hdr>*:nth-child(4),.ic-hdr>*:nth-child(5),.ic-hdr>*:nth-child(6),.ic-hdr>*:nth-child(7){display:none}
+}
+/* Gantt order input */
+.order-inp{width:36px;background:var(--bg-deep);border:1px solid var(--border);border-radius:4px;color:var(--text-primary);font-family:'Bebas Neue',sans-serif;font-size:17px;text-align:center;padding:2px 0;outline:none;cursor:pointer;transition:border-color .15s}
+.order-inp:hover,.order-inp:focus{border-color:var(--gold);color:var(--gold)}
+.order-wrap{display:flex;align-items:center;gap:6px}
+.alert-panel{margin-bottom:24px;display:none}
+.alert-panel.has-alerts{display:block}
+.alert-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.alert-title{display:flex;align-items:center;gap:9px;font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:2.8px;color:var(--text-primary)}
+.alert-dismiss{background:transparent;border:1px solid var(--border);border-radius:20px;padding:3px 12px;font-size:11px;color:var(--text-muted);cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .15s}
+.alert-dismiss:hover{border-color:var(--text-secondary);color:var(--text-primary)}
+.alert-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:10px}
+.alert-card{border-radius:var(--radius-sm);padding:13px 15px;display:flex;align-items:flex-start;gap:12px;border:1px solid;box-shadow:0 1px 4px rgba(0,0,0,0.06)}
+.alert-card.lvl-overdue{background:rgba(138,72,72,0.07);border-color:rgba(138,72,72,0.28)}
+.alert-card.lvl-urgent{background:rgba(122,96,48,0.07);border-color:rgba(122,96,48,0.28)}
+.alert-card.lvl-soon{background:rgba(74,127,160,0.07);border-color:rgba(74,127,160,0.22)}
+.alert-icon{width:32px;height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
+.alert-card.lvl-overdue .alert-icon{background:rgba(138,72,72,0.14)}
+.alert-card.lvl-urgent  .alert-icon{background:rgba(122,96,48,0.14)}
+.alert-card.lvl-soon    .alert-icon{background:rgba(74,127,160,0.12)}
+.alert-body{flex:1;min-width:0}
+.alert-name{font-weight:600;font-size:13px;color:var(--text-primary);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;margin-bottom:2px}
+.alert-sub{font-size:11px;color:var(--text-secondary);margin-bottom:4px}
+.alert-badge{display:inline-block;padding:2px 8px;border-radius:20px;font-size:10px;font-weight:700}
+.alert-card.lvl-overdue .alert-badge{background:rgba(138,72,72,0.14);color:var(--coral)}
+.alert-card.lvl-urgent  .alert-badge{background:rgba(122,96,48,0.14);color:var(--amber)}
+.alert-card.lvl-soon    .alert-badge{background:rgba(74,127,160,0.12);color:var(--sky)}
+
+@media(max-width:768px){
+  .main{padding:14px}.header{padding:0 14px}
+  .kpi-strip{grid-template-columns:repeat(2,1fr)}
+  .mg{grid-template-columns:1fr}
+  .sub-r2{grid-template-columns:1fr 1fr}
+  .alert-grid{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="hbrand">
+    <div class="hlogo">ML</div>
+    <div><div class="htitle">PROCUREMENT · TRANSPORTE 2026</div><div class="hsub">Regional Policy Initiative Tracker</div></div>
+  </div>
+  <div class="hright">
+    <div class="sdw"><div class="sdot"></div><span id="last-saved">Auto-guardado activo</span></div>
+    <button class="btn btn-g" onclick="openModal()">
+      <svg width="13" height="13" fill="none" viewBox="0 0 13 13"><path d="M6.5 1v11M1 6.5h11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      Nueva Iniciativa
+    </button>
+    <button class="btn btn-p" onclick="refreshDashboard()">
+      <svg width="13" height="13" fill="none" viewBox="0 0 13 13"><path d="M12 2A6 6 0 1 0 12 11" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M12 1v3H9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      REFRESH
+    </button>
+  </div>
+</header>
+
+<main class="main">
+  <!-- ALERT PANEL -->
+  <div class="alert-panel" id="alert-panel">
+    <div class="alert-hdr">
+      <div class="alert-title">
+        <div class="sa"></div>
+        ALERTAS DE VENCIMIENTO
+        <span id="alert-count" style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;background:rgba(138,72,72,0.12);color:var(--coral);border-radius:4px;padding:2px 8px;margin-left:4px"></span>
+      </div>
+      <button class="alert-dismiss" onclick="dismissAlerts()">Ocultar hasta próximo refresh</button>
+    </div>
+    <div class="alert-grid" id="alert-grid"></div>
+  </div>
+
+  <div class="kpi-strip" id="kpi-strip"></div>
+
+  <div class="sh">
+    <div class="st"><div class="sa"></div>ROADMAP DE IMPLEMENTACIÓN 2026</div>
+    <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+      <div style="display:flex;align-items:center;gap:14px;font-size:10px;color:var(--text-muted);font-weight:600;letter-spacing:.5px">
+        <span style="display:flex;align-items:center;gap:4px"><span style="width:8px;height:8px;border-radius:50%;background:var(--teal);display:inline-block"></span>EN PROGRESO</span>
+        <span style="display:flex;align-items:center;gap:4px"><span style="width:8px;height:8px;border-radius:50%;background:var(--amber);display:inline-block"></span>EN RIESGO (&gt;50% tiempo, avance ≥50% pero &lt;esperado)</span>
+        <span style="display:flex;align-items:center;gap:4px"><span style="width:8px;height:8px;border-radius:50%;background:var(--coral);display:inline-block"></span>ATRASADA (&gt;50% tiempo, &lt;50% avance)</span>
+      </div>
+      <div class="fb" id="gfbar">
+        <button class="fbtn on" onclick="fGantt('all',this)">Todas</button>
+        <button class="fbtn" onclick="fGantt('active',this)">En Progreso</button>
+        <button class="fbtn" onclick="fGantt('planning',this)">Planeación</button>
+        <button class="fbtn" onclick="fGantt('done',this)">Completadas</button>
+      </div>
+    </div>
+  </div>
+  <div class="gw"><div class="gs"><table class="gt" id="gtbl"></table></div></div>
+
+  <div class="sh">
+    <div class="st"><div class="sa"></div>DETALLE DE INICIATIVAS</div>
+    <span style="font-size:11px;color:var(--text-muted)">Clic para expandir</span>
+  </div>
+  <div class="icards" id="icards"></div>
+
+  <div class="sub-panel">
+    <div class="sp-hdr">
+      <div class="sp-title">
+        <div class="sa"></div>
+        PANEL DE SUBTAREAS &amp; QUICK WINS
+        <span id="sp-badge" style="font-family:'DM Sans',sans-serif;font-size:11px;font-weight:600;background:var(--gold-dim);color:var(--gold);border-radius:4px;padding:2px 8px;margin-left:4px"></span>
+      </div>
+      <div class="fb" id="sfbar">
+        <button class="fbtn on" onclick="fSubs('all',this)">Todas</button>
+        <button class="fbtn" onclick="fSubs('pending',this)">⬜ Pendiente</button>
+        <button class="fbtn" onclick="fSubs('active',this)">🔵 En curso</button>
+        <button class="fbtn" onclick="fSubs('done',this)">✅ Completado</button>
+        <button class="fbtn" onclick="fSubs('quick',this)" style="border-color:rgba(107,94,138,.3);color:var(--violet)">⚡ Quick Wins</button>
+      </div>
+    </div>
+    <div style="overflow-x:auto"><table class="sub-tbl" id="sub-tbl"></table></div>
+  </div>
+</main>
+
+<!-- MODAL -->
+<div class="mov" id="mov">
+  <div class="modal">
+    <div class="m-title">
+      <svg width="20" height="20" fill="none" viewBox="0 0 20 20"><circle cx="10" cy="10" r="9" stroke="currentColor" stroke-width="1.4"/><path d="M10 7v3M10 13h.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+      <span id="m-title-txt">NUEVA INICIATIVA</span>
+    </div>
+    <div class="mg">
+      <div class="mf full"><label class="mlbl">Nombre *</label><input class="ef" id="m-name" type="text" placeholder="Ej. Optimización de lead times Tier 1"></div>
+      <div class="mf"><label class="mlbl">Prioridad</label>
+        <select class="ef" id="m-pri">
+          <option value="critical">● Crítica</option><option value="high">● Alta</option>
+          <option value="medium" selected>● Media</option><option value="low">● Baja</option>
+        </select>
+      </div>
+      <div class="mf"><label class="mlbl">Estado</label>
+        <select class="ef" id="m-st">
+          <option value="planning">Planeación</option><option value="active">En Progreso</option>
+          <option value="review">En Revisión</option><option value="done">Completado</option><option value="hold">En Espera</option>
+        </select>
+      </div>
+      <div class="mf"><label class="mlbl">Owner / Responsable</label><input class="ef" id="m-owner" type="text" placeholder="Nombre"></div>
+      <div class="mf"><label class="mlbl">Avance (%)</label><input class="ef" id="m-prog" type="number" min="0" max="100" value="0"></div>
+      <div class="mf"><label class="mlbl">Fecha Inicio</label><input class="ef" id="m-start" type="month"></div>
+      <div class="mf"><label class="mlbl">Fecha Fin</label><input class="ef" id="m-end" type="month"></div>
+      <div class="mf full"><label class="mlbl">Objetivo / Descripción</label><textarea class="ef" id="m-desc" placeholder="Describe el objetivo…"></textarea></div>
+    </div>
+    <div class="m-acts">
+      <button class="btn-cx" onclick="closeModal()">Cancelar</button>
+      <button class="btn-sv" onclick="saveInit()"><span id="m-save-txt">Crear</span></button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast">
+  <svg width="14" height="14" fill="none" viewBox="0 0 14 14"><path d="M2.5 7l3 3L11.5 3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  <span id="toast-msg">Guardado</span>
+</div>
+
+<script>
+// ── CONSTANTS ─────────────────────────────────────────
+const SK  = 'proc_2026_v7';
+const MOS = ['ENE','FEB','MAR','ABR','MAY','JUN','JUL','AGO','SEP','OCT','NOV','DIC'];
+const CUR = new Date().getMonth(); // 0-based: 0=ENE … 4=MAY … 11=DIC
+const IC_COLORS = ['#3D5A7A','#3A7060','#5E4E80','#7A4040','#3A6870','#6A5530','#4A6880','#6A5050'];
+const PL = {critical:'Crítica',high:'Alta',medium:'Media',low:'Baja'};
+const SL = {planning:'Planeación',active:'En Progreso',review:'En Revisión',done:'Completado',hold:'En Espera',atrasada:'Atrasada',riesgo:'En Riesgo'};
+
+// ── AUTO-STATUS EVALUATION ─────────────────────────────
+// Rules applied only to non-done, non-hold initiatives that have started:
+//   elapsed%  = (CUR - startIdx) / span * 100   (proportional time consumed)
+//   remaining% = 100 - elapsed%
+//
+//   • If elapsed >= 50% AND progress < 50%  → ATRASADA  (behind, >50% time gone, <50% done)
+//   • If elapsed >= 50% AND progress >= 50% AND progress < elapsed → EN RIESGO
+//   • If progress >= elapsed (on-track or ahead)  → En Progreso
+//   • Not yet started (CUR < start)               → keep as Planeación
+//   • Past end date and not done                  → ATRASADA
+//
+// done / hold / review are always kept as-is (manually set).
+function evalStatus(ini){
+  // Preserve explicit manual statuses
+  if(['done','hold','review'].includes(ini.status)) return ini.status;
+
+  const si = mIdx(ini.startMonth), ei = mIdx(ini.endMonth);
+  if(si===null || ei===null) return ini.status;
+
+  // Not started yet
+  if(CUR < si) return 'planning';
+
+  // Past end date with less than 100% progress
+  if(CUR > ei && (ini.progress||0) < 100) return 'atrasada';
+
+  // Within range
+  const span    = Math.max(ei - si, 1);
+  const elapsed = CUR - si;
+  const elapsedPct = Math.round((elapsed / span) * 100); // % of time consumed
+  const prog    = ini.progress || 0;
+
+  if(elapsedPct >= 50 && prog < 50)                       return 'atrasada';
+  if(elapsedPct >= 50 && prog >= 50 && prog < elapsedPct) return 'riesgo';
+  return 'active';
+}
+
+// ── DEFAULT DATA ───────────────────────────────────────
+const DEFAULT = [
+  { id:1, name:"Estandarización de Información Relevante PIC",
+    priority:"high", status:"planning", owner:"",
+    startMonth:"2026-04", endMonth:"2026-07", progress:0,
+    desc:"Estandarizar la información clave del PIC (Procurement Information Center) para garantizar consistencia en los datos utilizados en la toma de decisiones de transporte.",
+    nextstepsList:[
+      {id:"n1a",text:"Definir campos y estructura del PIC",done:false},
+      {id:"n1b",text:"Alinear con equipos de datos y operaciones",done:false}
+    ],
+    subtasks:[]
+  },
+  { id:2, name:"Gestión de Renegociaciones",
+    priority:"critical", status:"planning", owner:"",
+    startMonth:"2026-04", endMonth:"2026-09", progress:0,
+    desc:"Gestionar el proceso de renegociación de contratos con proveedores de transporte, asegurando mejores condiciones tarifarias y de servicio.",
+    nextstepsList:[
+      {id:"n2a",text:"Mapear contratos con vencimiento próximo",done:false},
+      {id:"n2b",text:"Definir estrategia de negociación por segmento",done:false}
+    ],
+    subtasks:[]
+  },
+  { id:3, name:"Cálculo de Savings para Shipping",
+    priority:"high", status:"planning", owner:"",
+    startMonth:"2026-04", endMonth:"2026-06", progress:0,
+    desc:"Desarrollar metodología y herramienta para el cálculo estandarizado de savings generados en las operaciones de shipping y transporte.",
+    nextstepsList:[
+      {id:"n3a",text:"Definir metodología de cálculo de savings",done:false},
+      {id:"n3b",text:"Validar con Finance el criterio de ahorro",done:false}
+    ],
+    subtasks:[]
+  },
+  { id:4, name:"Gestión de Próximas Renovaciones",
+    priority:"high", status:"planning", owner:"",
+    startMonth:"2026-04", endMonth:"2026-08", progress:0,
+    desc:"Identificar, priorizar y gestionar proactivamente los contratos de transporte próximos a vencer para evitar renovaciones automáticas desfavorables.",
+    nextstepsList:[
+      {id:"n4a",text:"Levantar inventario de contratos por vencer en 2026",done:false},
+      {id:"n4b",text:"Priorizar por volumen e impacto",done:false}
+    ],
+    subtasks:[]
+  },
+  { id:5, name:"Control de Spend",
+    priority:"medium", status:"planning", owner:"",
+    startMonth:"2026-05", endMonth:"2026-10", progress:0,
+    desc:"Implementar un modelo de control y visibilidad del gasto en transporte por categoría, proveedor y región para facilitar la toma de decisiones.",
+    nextstepsList:[
+      {id:"n5a",text:"Definir estructura de reporte de spend",done:false},
+      {id:"n5b",text:"Conectar fuentes de datos de facturación",done:false}
+    ],
+    subtasks:[]
+  },
+  { id:6, name:"Spend Addressable",
+    priority:"medium", status:"planning", owner:"",
+    startMonth:"2026-06", endMonth:"2026-11", progress:0,
+    desc:"Identificar y cuantificar el gasto de transporte susceptible de ser gestionado estratégicamente por procurement, diferenciando el spend addressable del no addressable.",
+    nextstepsList:[
+      {id:"n6a",text:"Clasificar categorías de gasto",done:false},
+      {id:"n6b",text:"Calcular % de spend bajo gestión de procurement",done:false}
+    ],
+    subtasks:[]
+  },
+  { id:7, name:"Cumplimiento de Política",
+    priority:"high", status:"planning", owner:"",
+    startMonth:"2026-04", endMonth:"2026-09", progress:0,
+    desc:"Asegurar que las operaciones de transporte cumplan con la política vigente de procurement 2026, definiendo métricas de cumplimiento y mecanismos de seguimiento.",
+    nextstepsList:[
+      {id:"n7a",text:"Mapear brechas de cumplimiento actuales",done:false},
+      {id:"n7b",text:"Definir KPIs de adherencia a política",done:false}
+    ],
+    subtasks:[]
+  },
+  { id:8, name:"Thresholds de Aprobación",
+    priority:"medium", status:"planning", owner:"",
+    startMonth:"2026-05", endMonth:"2026-08", progress:0,
+    desc:"Revisar y actualizar los umbrales de aprobación para contratos y compras de transporte, alineando con la política regional y los niveles de autorización vigentes.",
+    nextstepsList:[
+      {id:"n8a",text:"Revisar thresholds actuales vs política 2026",done:false},
+      {id:"n8b",text:"Validar con Legal y directores regionales",done:false}
+    ],
+    subtasks:[]
+  }
+];
+
+// ── STATE ──────────────────────────────────────────────
+let data=[], editId=null, gFilter='all', sFilter='all';
+const nsShow={};  // per-initiative: show hidden (done) next steps?
+
+// ── STORAGE ────────────────────────────────────────────
+function load(){
+  try{
+    const s=localStorage.getItem(SK);
+    data = s ? JSON.parse(s) : JSON.parse(JSON.stringify(DEFAULT));
+    data.forEach((i,idx)=>{
+      if(!i.subtasks) i.subtasks=[];
+      if(!i.nextstepsList) i.nextstepsList=[];
+      if(!i.color) i.color=IC_COLORS[idx%IC_COLORS.length];
+      if(i.order===undefined) i.order=idx+1;
+      i.subtasks.forEach(s=>{if(s.quickWin===undefined)s.quickWin=false;if(!s.owner)s.owner='';});
+      // ── Reconcile: if initiative has subtasks, recalculate progress from them
+      if(i.subtasks.length>0){
+        i.progress = Math.round(i.subtasks.reduce((sum,s)=>sum+(s.progress||0),0)/i.subtasks.length);
+      }
+    });
+    // Always sort by order on load
+    data.sort((a,b)=>a.order-b.order);
+    if(!s) save();
+  }catch(e){ data=JSON.parse(JSON.stringify(DEFAULT)); }
+}
+
+// Reorder: user typed a new number for initiative with given id.
+// Clamps to 1–N, shifts everything else up or down, re-stamps sequential orders.
+function reorder(id, newNum){
+  const n = data.length;
+  newNum = Math.max(1, Math.min(n, parseInt(newNum)||1));
+  const fromIdx = data.findIndex(i=>i.id===id);
+  if(fromIdx === -1) return;
+  const [moved] = data.splice(fromIdx, 1);
+  data.splice(newNum-1, 0, moved);
+  // Re-stamp sequential order values
+  data.forEach((i,idx)=>{ i.order=idx+1; });
+  save(); renderAll();
+  toast(`Iniciativa movida a la posición #${newNum}`);
+}
+function save(){
+  try{
+    localStorage.setItem(SK,JSON.stringify(data));
+    const n=new Date();
+    const el=document.getElementById('last-saved');
+    if(el) el.textContent=`Guardado ${n.getHours()}:${String(n.getMinutes()).padStart(2,'0')}`;
+  }catch(e){}
+}
+
+// ── KPIs ───────────────────────────────────────────────
+function renderKPIs(){
+  const t=data.length,
+    act=data.filter(i=>evalStatus(i)==='active').length,
+    done=data.filter(i=>i.status==='done').length,
+    atrasada=data.filter(i=>evalStatus(i)==='atrasada').length,
+    riesgo=data.filter(i=>evalStatus(i)==='riesgo').length,
+    waiting=data.filter(i=>['planning','hold'].includes(evalStatus(i))||['planning','hold'].includes(i.status)).length,
+    avg=t?Math.round(data.reduce((s,i)=>s+(i.progress||0),0)/t):0;
+  const allS=data.flatMap(i=>i.subtasks||[]);
+  const qw=allS.filter(s=>s.quickWin).length, sd=allS.filter(s=>s.progress===100).length;
+  const autoCount = data.filter(i=>(i.subtasks||[]).length>0).length;
+  const planning=data.filter(i=>evalStatus(i)==='planning').length;
+  const hold=data.filter(i=>i.status==='hold').length;
+  document.getElementById('kpi-strip').innerHTML=`
+    <div class="kc k0"><div class="kl">Total Iniciativas</div><div class="kv">${t}</div><div class="ks">En roadmap 2026</div></div>
+    <div class="kc k1"><div class="kl">En Progreso</div><div class="kv">${act}</div><div class="ks">Actualmente activas</div></div>
+    <div class="kc k2"><div class="kl">Completadas</div><div class="kv">${done}</div><div class="ks">${sd} subtareas cerradas</div></div>
+    <div class="kc k3"><div class="kl">Atrasadas / Riesgo</div><div class="kv">${atrasada+riesgo}</div><div class="ks">${atrasada} atrasadas · ${riesgo} en riesgo</div></div>
+    <div class="kc k5"><div class="kl">En Espera / Planeación</div><div class="kv">${planning+hold}</div><div class="ks">${planning} en planeación · ${hold} en espera</div></div>
+    <div class="kc k4">
+      <div class="kl" style="display:flex;align-items:center;justify-content:space-between">
+        AVANCE GLOBAL
+        <span onclick="recalcAll()" title="Recalcular todos los avances" style="cursor:pointer;font-size:9px;color:var(--gold);letter-spacing:.5px;font-weight:700;padding:1px 6px;border:1px solid var(--border-hi);border-radius:3px;transition:all .15s" onmouseover="this.style.background='var(--gold-dim)'" onmouseout="this.style.background='transparent'">↺ SYNC</span>
+      </div>
+      <div class="kv">${avg}%</div>
+      <div class="ks">⚡ ${qw} qw · ${autoCount} auto-calculadas</div>
+    </div>`;
+}
+
+// ── GANTT ──────────────────────────────────────────────
+function mIdx(s){if(!s)return null;const[y,m]=s.split('-').map(Number);if(y!==2026)return y<2026?0:11;return m-1;}
+
+// Returns true if initiative is "behind schedule":
+// its span covers today's month and actual progress < expected progress at this point
+function isBehind(ini){
+  const si=mIdx(ini.startMonth), ei=mIdx(ini.endMonth);
+  if(si===null||ei===null) return false;
+  if(ini.status==='done') return false;
+  if(CUR < si || CUR > ei) return false;          // not in range
+  const span = Math.max(ei - si, 1);
+  const elapsed = CUR - si;                        // months elapsed since start
+  const expected = Math.round((elapsed / span) * 100);
+  return (ini.progress||0) < expected;
+}
+
+function renderGantt(){
+  const list=gFilter==='all'?data:data.filter(i=>i.status===gFilter);
+  let h=`<thead><tr>
+    <th style="text-align:center;min-width:52px">#</th>
+    <th style="text-align:left;min-width:210px">INICIATIVA</th>
+    <th style="min-width:88px">OWNER</th><th style="min-width:80px">PRIORIDAD</th>
+    <th style="min-width:92px">ESTADO</th><th style="min-width:56px;text-align:center">%</th>
+    ${MOS.map((m,i)=>{
+      const isCur = i===CUR;
+      return`<th class="mh${isCur?' cur':''}" style="min-width:62px;${isCur?'position:relative;':''}">${
+        isCur
+          ? `<div style="display:flex;flex-direction:column;align-items:center;gap:2px;line-height:1">
+               <span style="font-size:9px;letter-spacing:1.6px">${m}</span>
+               <span style="font-size:11px;line-height:1;color:var(--gold)">▼</span>
+               <span style="font-size:8px;letter-spacing:0;text-transform:none;font-family:'DM Sans',sans-serif;color:var(--gold);font-weight:600;white-space:nowrap">HOY</span>
+             </div>`
+          : m
+      }</th>`;
+    }).join('')}
+    <th style="min-width:46px"></th>
+  </tr></thead><tbody>`;
+
+  if(!list.length){ h+=`<tr><td colspan="19" style="text-align:center;padding:34px;color:var(--text-muted);font-size:13px">Sin iniciativas en este filtro</td></tr>`; }
+  else list.forEach((ini,idx)=>{
+    const col=ini.color||IC_COLORS[idx%IC_COLORS.length];
+    const si=mIdx(ini.startMonth),ei=mIdx(ini.endMonth);
+    const sc=(ini.subtasks||[]).length,dc=(ini.subtasks||[]).filter(s=>s.progress===100).length;
+    const qw=(ini.subtasks||[]).filter(s=>s.quickWin).length;
+    const sub=sc?`<span style="font-size:10px;color:var(--text-muted);margin-left:4px">${sc} sub · ${dc}✓${qw?` · ⚡${qw}`:''}</span>`:'';
+    const globalIdx = data.indexOf(ini);
+    const displayNum = globalIdx+1;
+    const behind = isBehind(ini);
+    const displayStatus = evalStatus(ini);
+    const mcs=MOS.map((_,i)=>{
+      const cur=i===CUR, inR=si!==null&&ei!==null&&i>=si&&i<=ei; let bar='';
+      if(inR){
+        const isS=i===si,isE=i===ei,sp=Math.max(ei-si,1),filled=((i-si)/sp*100)<=(ini.progress||0);
+        bar=`<div class="gbw"><div class="gb" style="background:${filled?col:col+'28'};left:${isS?'4px':'0'};right:${isE?'4px':'0'};border-radius:${isS&&isE?'3px':isS?'3px 0 0 3px':isE?'0 3px 3px 0':'0'}"></div></div>`;
+      }
+      // Current-month column: draw the vertical "today" line
+      const todayLine = cur
+        ? `<div style="position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--gold);opacity:0.5;pointer-events:none;z-index:2"></div>`
+        : '';
+      return`<td class="mc${cur?' cur':''}" style="position:relative">${todayLine}${bar}</td>`;
+    }).join('');
+
+    // Row highlight for atrasada/riesgo
+    const rowHighlight = displayStatus==='atrasada' ? ' style="background:rgba(138,72,72,0.03)"'
+                       : displayStatus==='riesgo'   ? ' style="background:rgba(122,96,48,0.03)"' : '';
+
+    h+=`<tr class="gr"${rowHighlight}>
+      <td style="text-align:center">
+        <div class="order-wrap" style="justify-content:center">
+          <input class="order-inp" type="number" min="1" max="${data.length}"
+            value="${displayNum}"
+            title="Cambia el número para reordenar"
+            onkeydown="if(event.key==='Enter'){reorder(${ini.id},this.value);this.blur()}"
+            onblur="reorder(${ini.id},this.value)">
+        </div>
+      </td>
+      <td>
+        <div class="iname" onclick="editIni(${ini.id})" style="color:${col}">${ini.name}</div>
+        <div style="margin-top:3px">${sub}</div>
+      </td>
+      <td style="font-size:12px;color:var(--text-secondary);white-space:nowrap">${ini.owner||'—'}</td>
+      <td><span class="ptag p-${ini.priority}">${PL[ini.priority]}</span></td>
+      <td><span class="stag s-${displayStatus}">${SL[displayStatus]||displayStatus}</span></td>
+      <td style="text-align:center">${mkRing(ini.progress,col)}</td>
+      ${mcs}
+      <td><button class="xbtn" onclick="delIni(${ini.id})">✕</button></td>
+    </tr>`;
+  });
+  document.getElementById('gtbl').innerHTML=h+'</tbody>';
+}
+function mkRing(p,col){p=p||0;const r=13,c=2*Math.PI*r,off=c-(p/100)*c;
+  return`<div class="ring"><svg width="32" height="32" viewBox="0 0 32 32"><circle cx="16" cy="16" r="${r}" fill="none" stroke="rgba(0,0,0,0.06)" stroke-width="2.5"/><circle cx="16" cy="16" r="${r}" fill="none" stroke="${col}" stroke-width="2.5" stroke-dasharray="${c}" stroke-dashoffset="${off}" stroke-linecap="round"/></svg><div class="ring-txt" style="color:${col}">${p}%</div></div>`;}
+
+// ── INITIATIVE CARDS ───────────────────────────────────
+function renderCards(){
+  const g=document.getElementById('icards');
+  if(!data.length){g.innerHTML=`<div class="empty-s">No hay iniciativas. Crea la primera arriba.</div>`;return;}
+  g.innerHTML=data.map((ini,idx)=>{
+    const col=ini.color||IC_COLORS[idx%IC_COLORS.length];
+    const sc=(ini.subtasks||[]).length,dc=(ini.subtasks||[]).filter(s=>s.progress===100).length;
+    const qw=(ini.subtasks||[]).filter(s=>s.quickWin).length;
+    const orderNum = String(idx+1).padStart(2,'0');
+    const displayStatus = evalStatus(ini);
+    return`<div class="ic" id="ic-${ini.id}">
+      <div class="ic-hdr" onclick="togCard(${ini.id})">
+        <div class="ic-num" style="color:${col}">${orderNum}</div>
+        <div class="ic-ta">
+          <div class="ic-name" style="color:${col}">${ini.name}</div>
+          <div class="ic-meta">${ini.owner||'—'} · ${fmt(ini.startMonth)} → ${fmt(ini.endMonth)}</div>
+        </div>
+        <span class="ptag p-${ini.priority}">${PL[ini.priority]}</span>
+        <span class="stag s-${displayStatus}">${SL[displayStatus]||displayStatus}</span>
+        <div style="text-align:center">${mkRing(ini.progress,col)}</div>
+        <div style="font-size:11px;color:var(--text-muted);text-align:center">${fmt(ini.startMonth)} → ${fmt(ini.endMonth)}</div>
+        <div style="font-size:11px;color:var(--text-muted)">${sc} sub · ${dc}✓${qw?` · ⚡${qw}`:''}</div>
+        <svg class="chevron" width="15" height="15" viewBox="0 0 15 15" fill="none"><path d="M3.5 5.5l4 4 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <button class="xbtn" onclick="event.stopPropagation();delIni(${ini.id})" title="Eliminar iniciativa">✕</button>
+      </div>
+      <div class="ic-body" id="ib-${ini.id}" style="display:none">
+
+        <!-- COL 1: Objetivo + Avance -->
+        <div class="col">
+          <div class="col-lbl">📋 OBJETIVO Y AVANCE</div>
+          <textarea class="ef" rows="5" onchange="updF(${ini.id},'desc',this.value)" placeholder="Descripción...">${esc(ini.desc||'')}</textarea>
+          <div style="margin-top:12px">
+            <div class="col-lbl" style="margin-bottom:4px">
+              AVANCE GENERAL
+              <span id="auto-lbl-${ini.id}" style="font-size:9px;font-weight:400;letter-spacing:0;text-transform:none;color:var(--emerald);display:${(ini.subtasks||[]).length?'inline':'none'}">· calculado automáticamente</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px">
+              <input type="range" class="psl" min="0" max="100" value="${ini.progress||0}"
+                oninput="updProg(${ini.id},this.value,'pl-${ini.id}','pb-${ini.id}')">
+              <span id="pl-${ini.id}" style="font-family:'JetBrains Mono',monospace;font-size:13px;color:${col};min-width:34px;font-weight:700">${ini.progress||0}%</span>
+            </div>
+            <div class="pbar-w"><div class="pbar-f" id="pb-${ini.id}" style="width:${ini.progress||0}%"></div></div>
+          </div>
+        </div>
+
+        <!-- COL 2: Config + Next Steps en bullets -->
+        <div class="col">
+          <div class="col-lbl">⚙️ CONFIGURACIÓN</div>
+          <div style="display:grid;gap:9px;margin-bottom:14px">
+            <div>
+              <div style="font-size:9px;color:var(--text-muted);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px">Owner / Responsable</div>
+              <input class="ef" type="text" value="${esc(ini.owner||'')}" placeholder="Nombre del responsable"
+                onchange="updF(${ini.id},'owner',this.value)">
+            </div>
+            <div>
+              <div style="font-size:9px;color:var(--text-muted);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px">Estado</div>
+              <select class="ef" onchange="updF(${ini.id},'status',this.value)">
+                ${['planning','active','review','done','hold'].map(s=>`<option value="${s}"${ini.status===s?' selected':''}>${SL[s]}</option>`).join('')}
+              </select>
+            </div>
+            <div>
+              <div style="font-size:9px;color:var(--text-muted);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:4px">Prioridad</div>
+              <select class="ef" onchange="updF(${ini.id},'priority',this.value)">
+                ${['critical','high','medium','low'].map(p=>`<option value="${p}"${ini.priority===p?' selected':''}>${PL[p]}</option>`).join('')}
+              </select>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+              <div>
+                <div style="font-size:9px;color:var(--text-muted);letter-spacing:1.3px;text-transform:uppercase;margin-bottom:4px">Inicio</div>
+                <input class="ef" type="month" value="${ini.startMonth||''}" onchange="updF(${ini.id},'startMonth',this.value)">
+              </div>
+              <div>
+                <div style="font-size:9px;color:var(--text-muted);letter-spacing:1.3px;text-transform:uppercase;margin-bottom:4px">Fin</div>
+                <input class="ef" type="month" value="${ini.endMonth||''}" onchange="updF(${ini.id},'endMonth',this.value)">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lbl">
+            💬 NEXT STEPS
+            <span style="font-size:9px;color:var(--text-muted);font-weight:400;letter-spacing:0;text-transform:none">· ✓ para marcar completado</span>
+          </div>
+          <div class="ns-list" id="nsl-${ini.id}">${buildNS(ini)}</div>
+          <button class="ns-add-btn" onclick="addNS(${ini.id})">
+            <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 1v9M1 5.5h9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Agregar next step
+          </button>
+          <button class="ns-tog" id="nst-${ini.id}" onclick="togNS(${ini.id})">
+            <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><circle cx="5.5" cy="5.5" r="4" stroke="currentColor" stroke-width="1.2"/><circle cx="5.5" cy="5.5" r="1.5" fill="currentColor"/></svg>
+            <span id="nstl-${ini.id}">Ver completados</span>
+          </button>
+        </div>
+
+        <!-- COL 3: Subtareas -->
+        <div class="col">
+          <div class="col-lbl">
+            📌 SUBTAREAS
+            <span id="sbadge-${ini.id}" style="font-size:9px;font-weight:700;background:${col}18;color:${col};border-radius:3px;padding:1px 6px;border:1px solid ${col}38">${sc} · ${dc} completadas${qw?` · ⚡${qw}`:''}</span>
+          </div>
+          <div id="sa-${ini.id}">${buildSubs(ini)}</div>
+          <button class="add-sub-btn" onclick="addSub(${ini.id})">
+            <svg width="11" height="11" viewBox="0 0 11 11" fill="none"><path d="M5.5 1v9M1 5.5h9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Agregar subtarea
+          </button>
+        </div>
+
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ── NEXT STEPS BULLETS ─────────────────────────────────
+function buildNS(ini){
+  const list=ini.nextstepsList||[];
+  const show=nsShow[ini.id]||false;
+  if(!list.length) return`<div style="font-size:12px;color:var(--text-muted);padding:4px 0">Sin next steps. Agrega con el botón de abajo.</div>`;
+  return list.map(ns=>{
+    const isDone=ns.done||false;
+    const hideCls=isDone?(show?'ns-done-show':'ns-done-hide'):'';
+    return`<div class="ns-item ${hideCls}" id="nsi-${ns.id}">
+      <div class="ns-check${isDone?' checked':''}" onclick="doneNS(${ini.id},'${ns.id}')"></div>
+      <textarea class="ns-txt${isDone?' struck':''}" rows="1"
+        placeholder="Escribe el next step…"
+        onchange="updNS(${ini.id},'${ns.id}',this.value)"
+        oninput="this.style.height='auto';this.style.height=this.scrollHeight+'px'"
+      >${esc(ns.text||'')}</textarea>
+      <button class="ns-del" onclick="delNS(${ini.id},'${ns.id}')">✕</button>
+    </div>`;
+  }).join('');
+}
+
+function addNS(iid){
+  const ini=data.find(i=>i.id===iid); if(!ini) return;
+  if(!ini.nextstepsList) ini.nextstepsList=[];
+  ini.nextstepsList.push({id:`n${iid}-${Date.now()}`,text:'',done:false});
+  save(); reNS(iid); toast('Next step agregado');
+}
+function delNS(iid,nid){
+  const ini=data.find(i=>i.id===iid); if(!ini) return;
+  ini.nextstepsList=(ini.nextstepsList||[]).filter(n=>n.id!==nid);
+  save(); reNS(iid); toast('Next step eliminado');
+}
+function updNS(iid,nid,val){
+  const ini=data.find(i=>i.id===iid); if(!ini) return;
+  const n=(ini.nextstepsList||[]).find(n=>n.id===nid); if(!n) return;
+  n.text=val; save();
+}
+function doneNS(iid,nid){
+  const ini=data.find(i=>i.id===iid); if(!ini) return;
+  const n=(ini.nextstepsList||[]).find(n=>n.id===nid); if(!n) return;
+  n.done=!n.done; save(); reNS(iid);
+}
+function togNS(iid){
+  nsShow[iid]=!nsShow[iid];
+  reNS(iid);
+  const lbl=document.getElementById(`nstl-${iid}`);
+  if(lbl) lbl.textContent=nsShow[iid]?'Ocultar completados':'Ver completados';
+}
+function reNS(iid){
+  const ini=data.find(i=>i.id===iid); if(!ini) return;
+  const el=document.getElementById(`nsl-${iid}`);
+  if(el){ el.innerHTML=buildNS(ini); autoResizeNS(el); }
+}
+function autoResizeNS(el){
+  el.querySelectorAll('.ns-txt').forEach(ta=>{ta.style.height='auto';ta.style.height=ta.scrollHeight+'px';});
+}
+
+// ── SUBTASKS IN CARD ───────────────────────────────────
+function buildSubs(ini){
+  const s=ini.subtasks||[];
+  if(!s.length) return`<div style="font-size:12px;color:var(--text-muted);padding:6px 0">Sin subtareas aún.</div>`;
+  return s.map(sub=>buildSubItem(ini.id,sub)).join('');
+}
+function buildSubItem(iid,s){
+  const p=s.progress||0;
+  const col=p===100?'var(--emerald)':p>=50?'var(--gold)':'var(--text-secondary)';
+  const stage=p===100?'Completado':p>=50?'En curso':'Pendiente';
+  return`<div class="sub-item" id="si-${s.id}">
+    <div class="sub-r1">
+      <input class="sub-ti" type="text" value="${esc(s.title||'')}" placeholder="Nombre de la subtarea"
+        onchange="updSub(${iid},'${s.id}','title',this.value)">
+      <label class="qw-tog" title="Marcar como Quick Win">
+        <input type="checkbox" ${s.quickWin?'checked':''} onchange="updSub(${iid},'${s.id}','quickWin',this.checked);updBadge(${iid});renderSubPanel()">
+        <span class="qw-box"></span><span>⚡ QW</span>
+      </label>
+      <button class="sub-del" onclick="delSub(${iid},'${s.id}')">✕</button>
+    </div>
+    <div class="sub-r2">
+      <div>
+        <div class="sub-dlbl">Responsable</div>
+        <input class="ef" type="text" value="${esc(s.owner||'')}" placeholder="Nombre" style="font-size:11px;padding:5px 8px"
+          onchange="updSub(${iid},'${s.id}','owner',this.value)">
+      </div>
+      <div>
+        <div class="sub-dlbl">Fecha Inicio</div>
+        <input class="ef" type="month" value="${s.startDate||''}" style="font-size:11px;padding:5px 8px"
+          onchange="updSub(${iid},'${s.id}','startDate',this.value)">
+      </div>
+      <div>
+        <div class="sub-dlbl">Fecha Fin</div>
+        <input class="ef" type="month" value="${s.endDate||''}" style="font-size:11px;padding:5px 8px"
+          onchange="updSub(${iid},'${s.id}','endDate',this.value)">
+      </div>
+    </div>
+    <div style="margin-top:8px">
+      <div class="sub-prow">
+        <span class="sub-pn" id="sp-${s.id}" style="color:${col}">${p}%</span>
+        <span class="sub-st" id="ss-${s.id}">${stage}</span>
+      </div>
+      <div class="sub-bw"><div class="sub-bf" id="sb-${s.id}" style="width:${p}%"></div></div>
+      <input type="range" class="ssl" min="0" max="100" value="${p}"
+        oninput="updSubPct(${iid},'${s.id}',this.value)">
+    </div>
+  </div>`;
+}
+
+// ── SUBTASK PANEL (global) ─────────────────────────────
+function renderSubPanel(){
+  let allS=data.flatMap((ini,idx)=>(ini.subtasks||[]).map(s=>({
+    ...s,
+    iniId:ini.id, iniName:ini.name,
+    iniColor:ini.color||IC_COLORS[idx%IC_COLORS.length]
+  })));
+  let filtered=allS;
+  if(sFilter==='pending') filtered=allS.filter(s=>s.progress===0);
+  if(sFilter==='active')  filtered=allS.filter(s=>s.progress>0&&s.progress<100);
+  if(sFilter==='done')    filtered=allS.filter(s=>s.progress===100);
+  if(sFilter==='quick')   filtered=allS.filter(s=>s.quickWin);
+
+  const badge=document.getElementById('sp-badge');
+  if(badge){
+    const qwT=allS.filter(s=>s.quickWin).length;
+    badge.textContent=`${allS.length} total · ${allS.filter(s=>s.progress===100).length} completadas · ⚡${qwT} quick wins`;
+  }
+  if(!filtered.length){
+    document.getElementById('sub-tbl').innerHTML=`<tbody><tr><td colspan="8" style="text-align:center;padding:34px;color:var(--text-muted);font-size:13px">Sin subtareas en este filtro</td></tr></tbody>`;
+    return;
+  }
+  let h=`<thead><tr>
+    <th style="min-width:210px">SUBTAREA</th>
+    <th style="min-width:160px">INICIATIVA</th>
+    <th style="min-width:130px">RESPONSABLE</th>
+    <th style="min-width:75px">TIPO</th>
+    <th style="min-width:86px">INICIO</th>
+    <th style="min-width:86px">FIN</th>
+    <th style="min-width:190px">AVANCE</th>
+    <th style="min-width:88px">ESTADO</th>
+  </tr></thead><tbody>`;
+  filtered.forEach(s=>{
+    const p=s.progress||0;
+    const col=p===100?'#3D7A60':p>=50?'#4A5568':'#4A7FA0';
+    const scls=p===100?'sp-done':p>=50?'sp-act':'sp-pend';
+    const slbl=p===100?'Completado':p>=50?'En curso':'Pendiente';
+    const qwH=s.quickWin?`<span class="qw-flag">⚡ Quick Win</span>`:`<span class="stage-pill sp-pend" style="font-size:9px">Estándar</span>`;
+    h+=`<tr class="sub-row">
+      <td><div style="font-weight:600;color:var(--text-primary);font-size:13px">${esc(s.title)||'<em style="color:var(--text-muted)">Sin nombre</em>'}</div></td>
+      <td><span class="sib" style="background:${s.iniColor}15;color:${s.iniColor};border:1px solid ${s.iniColor}30">${s.iniName}</span></td>
+      <td style="font-size:12px;color:var(--text-secondary)">${esc(s.owner||'—')}</td>
+      <td>${qwH}</td>
+      <td style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-secondary)">${fmt(s.startDate)}</td>
+      <td style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text-secondary)">${fmt(s.endDate)}</td>
+      <td><div class="sbar"><div class="strack"><div class="sfill" style="width:${p}%;background:linear-gradient(90deg,${col},${p===100?'#3A7870':'#4A5568'})"></div></div><span class="spct" style="color:${col}">${p}%</span></div></td>
+      <td><span class="stage-pill ${scls}">${slbl}</span></td>
+    </tr>`;
+  });
+  document.getElementById('sub-tbl').innerHTML=h+'</tbody>';
+}
+
+// ── SUBTASK CRUD ───────────────────────────────────────
+function addSub(iid){
+  const ini=data.find(i=>i.id===iid); if(!ini) return;
+  const ns={id:`s${iid}-${Date.now()}`,title:'',owner:'',progress:0,startDate:ini.startMonth||'',endDate:ini.endMonth||'',quickWin:false};
+  ini.subtasks=ini.subtasks||[]; ini.subtasks.push(ns);
+  recalcIniProgress(iid);
+  save();
+  const a=document.getElementById(`sa-${iid}`); if(a) a.innerHTML=buildSubs(ini);
+  updBadge(iid); renderKPIs(); renderGantt(); renderSubPanel(); toast('Subtarea agregada');
+}
+function delSub(iid,sid){
+  const ini=data.find(i=>i.id===iid); if(!ini) return;
+  ini.subtasks=(ini.subtasks||[]).filter(s=>s.id!==sid);
+  recalcIniProgress(iid);
+  save();
+  const a=document.getElementById(`sa-${iid}`); if(a) a.innerHTML=buildSubs(ini);
+  updBadge(iid); renderKPIs(); renderGantt(); renderSubPanel(); toast('Subtarea eliminada');
+}
+function updSub(iid,sid,field,val){
+  const ini=data.find(i=>i.id===iid); if(!ini) return;
+  const s=(ini.subtasks||[]).find(s=>s.id===sid); if(!s) return;
+  s[field]=val; save(); renderSubPanel();
+}
+function updSubPct(iid,sid,val){
+  const p=parseInt(val);
+  const col=p===100?'var(--emerald)':p>=50?'var(--gold)':'var(--text-secondary)';
+  const stage=p===100?'Completado':p>=50?'En curso':'Pendiente';
+  // Update subtask visual elements
+  const spe=document.getElementById(`sp-${sid}`),sbe=document.getElementById(`sb-${sid}`),sse=document.getElementById(`ss-${sid}`);
+  if(spe){spe.textContent=p+'%';spe.style.color=col;}
+  if(sbe) sbe.style.width=p+'%';
+  if(sse) sse.textContent=stage;
+  // Persist subtask progress
+  const ini=data.find(i=>i.id===iid); if(!ini) return;
+  const s=(ini.subtasks||[]).find(s=>s.id===sid); if(s) s.progress=p;
+  // ── Auto-recalc initiative progress from subtasks ──
+  recalcIniProgress(iid);
+  save(); updBadge(iid); renderKPIs(); renderGantt(); renderSubPanel();
+}
+
+// Recalculates initiative progress as the average of its subtasks,
+// then updates the card slider + bar + label in place (no full re-render).
+function recalcIniProgress(iid){
+  const ini=data.find(i=>i.id===iid); if(!ini) return;
+  const subs=ini.subtasks||[];
+  if(!subs.length) return; // no subtasks → leave manual progress untouched
+  const avg=Math.round(subs.reduce((sum,s)=>sum+(s.progress||0),0)/subs.length);
+  ini.progress=avg;
+  // Update slider
+  const slider=document.querySelector(`#ib-${iid} input.psl`);
+  if(slider) slider.value=avg;
+  // Update label
+  const lbl=document.getElementById(`pl-${iid}`);
+  if(lbl) lbl.textContent=avg+'%';
+  // Update bar
+  const bar=document.getElementById(`pb-${iid}`);
+  if(bar) bar.style.width=avg+'%';
+}
+
+function updBadge(iid){
+  const ini=data.find(i=>i.id===iid); if(!ini) return;
+  const tot=(ini.subtasks||[]).length,done=(ini.subtasks||[]).filter(s=>s.progress===100).length,qw=(ini.subtasks||[]).filter(s=>s.quickWin).length;
+  const col=ini.color||'var(--gold)';
+  const b=document.getElementById(`sbadge-${iid}`);
+  if(b){b.textContent=`${tot} · ${done} completadas${qw?` · ⚡${qw}`:''}`;b.style.background=col+'18';b.style.color=col;b.style.border=`1px solid ${col}38`;}
+  // Show/hide the "calculado automáticamente" label
+  const autoLbl=document.getElementById(`auto-lbl-${iid}`);
+  if(autoLbl) autoLbl.style.display=tot>0?'inline':'none';
+}
+
+// ── CARD INTERACTIONS ──────────────────────────────────
+function togCard(id){
+  const card=document.getElementById(`ic-${id}`),body=document.getElementById(`ib-${id}`);
+  if(!card||!body) return;
+  const open=card.classList.contains('open');
+  document.querySelectorAll('.ic').forEach(c=>c.classList.remove('open'));
+  document.querySelectorAll('[id^="ib-"]').forEach(b=>b.style.display='none');
+  if(!open){
+    card.classList.add('open'); body.style.display='grid';
+    // auto-resize ns textareas
+    setTimeout(()=>{
+      const nsl=document.getElementById(`nsl-${id}`);
+      if(nsl) autoResizeNS(nsl);
+    },50);
+  }
+}
+function updF(id,field,val){
+  const ini=data.find(i=>i.id===id); if(!ini) return;
+  ini[field]=val; save();
+  if(['status','priority','startMonth','endMonth','owner'].includes(field)){renderKPIs();renderGantt();
+    // Update card meta line in place to avoid full re-render
+    const meta=document.querySelector(`#ic-${id} .ic-meta`);
+    if(meta) meta.textContent=`${ini.owner||'—'} · ${fmt(ini.startMonth)} → ${fmt(ini.endMonth)}`;
+  }
+  toast('Campo actualizado');
+}
+function updProg(id,val,lid,bid){
+  const lbl=document.getElementById(lid),bar=document.getElementById(bid);
+  if(lbl) lbl.textContent=val+'%';
+  if(bar) bar.style.width=val+'%';
+  const ini=data.find(i=>i.id===id); if(!ini) return;
+  ini.progress=parseInt(val); save(); renderKPIs(); renderGantt();
+}
+
+// ── FILTERS ────────────────────────────────────────────
+function fGantt(f,btn){
+  gFilter=f;
+  document.querySelectorAll('#gfbar .fbtn').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on'); renderGantt();
+}
+function fSubs(f,btn){
+  sFilter=f;
+  document.querySelectorAll('#sfbar .fbtn').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on'); renderSubPanel();
+}
+function delIni(id){
+  if(!confirm('¿Eliminar esta iniciativa?')) return;
+  data=data.filter(i=>i.id!==id);
+  data.forEach((i,idx)=>{ i.order=idx+1; });
+  save(); renderAll(); toast('Iniciativa eliminada');
+}
+
+// ── MODAL ──────────────────────────────────────────────
+function openModal(id){
+  editId=id||null;
+  const ini=id?data.find(i=>i.id===id):null;
+  document.getElementById('m-title-txt').textContent=ini?'EDITAR INICIATIVA':'NUEVA INICIATIVA';
+  document.getElementById('m-save-txt').textContent=ini?'Guardar Cambios':'Crear';
+  document.getElementById('m-name').value=ini?.name||'';
+  document.getElementById('m-pri').value=ini?.priority||'medium';
+  document.getElementById('m-st').value=ini?.status||'planning';
+  document.getElementById('m-owner').value=ini?.owner||'';
+  document.getElementById('m-start').value=ini?.startMonth||'2026-05';
+  document.getElementById('m-end').value=ini?.endMonth||'2026-08';
+  document.getElementById('m-prog').value=ini?.progress||0;
+  document.getElementById('m-desc').value=ini?.desc||'';
+  document.getElementById('mov').classList.add('open');
+}
+function editIni(id){openModal(id);}
+function closeModal(){document.getElementById('mov').classList.remove('open');editId=null;}
+function saveInit(){
+  const name=document.getElementById('m-name').value.trim();
+  if(!name){document.getElementById('m-name').style.borderColor='var(--coral)';setTimeout(()=>document.getElementById('m-name').style.borderColor='',2000);return;}
+  const d={
+    name,
+    priority:document.getElementById('m-pri').value,
+    status:document.getElementById('m-st').value,
+    owner:document.getElementById('m-owner').value.trim(),
+    startMonth:document.getElementById('m-start').value,
+    endMonth:document.getElementById('m-end').value,
+    progress:parseInt(document.getElementById('m-prog').value)||0,
+    desc:document.getElementById('m-desc').value.trim()
+  };
+  if(editId){
+    const idx=data.findIndex(i=>i.id===editId);
+    if(idx!==-1) data[idx]={...data[idx],...d};
+    toast('Iniciativa actualizada');
+  } else {
+    const maxId=data.reduce((m,i)=>Math.max(m,i.id),0);
+    data.push({id:maxId+1,order:data.length+1,subtasks:[],nextstepsList:[],color:IC_COLORS[data.length%IC_COLORS.length],...d});
+    toast('Iniciativa creada');
+  }
+  save(); closeModal(); renderAll();
+}
+
+// Force-recalculate progress for ALL initiatives that have subtasks
+function recalcAll(){
+  let changed = 0;
+  data.forEach(ini => {
+    if((ini.subtasks||[]).length > 0){
+      const avg = Math.round(ini.subtasks.reduce((sum,s)=>sum+(s.progress||0),0)/ini.subtasks.length);
+      if(ini.progress !== avg){ ini.progress = avg; changed++; }
+    }
+  });
+  save(); renderAll();
+  toast(changed > 0 ? `${changed} iniciativa${changed>1?'s':''} recalculada${changed>1?'s':''}` : 'Todo sincronizado ✓');
+}
+let alertsDismissed = false;
+
+// Returns last day of a given YYYY-MM string as a Date
+function monthEndDate(ym){
+  if(!ym) return null;
+  const [y,m] = ym.split('-').map(Number);
+  return new Date(y, m, 0); // day 0 of next month = last day of current
+}
+
+// Returns last day of a YYYY-MM-DD string as a Date
+function subEndDate(ds){
+  if(!ds) return null;
+  const [y,m] = ds.split('-').map(Number);
+  return new Date(y, m, 0);
+}
+
+function renderAlerts(){
+  const panel = document.getElementById('alert-panel');
+  const grid  = document.getElementById('alert-grid');
+  const count = document.getElementById('alert-count');
+  if(!panel||!grid) return;
+  if(alertsDismissed){ panel.classList.remove('has-alerts'); return; }
+
+  const today = new Date();
+  today.setHours(0,0,0,0);
+  const WEEK = 7 * 24 * 60 * 60 * 1000;   // 7 days in ms
+  const TWOWEEKS = 14 * 24 * 60 * 60 * 1000;
+
+  const alerts = [];
+
+  data.forEach(ini => {
+    // Skip fully done initiatives
+    if(ini.status === 'done') return;
+
+    // ── Initiative end date ──
+    const iniEnd = monthEndDate(ini.endMonth);
+    if(iniEnd){
+      const diff = iniEnd - today;
+      if(diff < 0){
+        alerts.push({
+          lvl:'overdue', icon:'🚨',
+          name: ini.name,
+          sub: `Iniciativa · Venció el ${fmtDate(iniEnd)}`,
+          badge: 'VENCIDA',
+          color: ini.color || '#3D5A7A'
+        });
+      } else if(diff <= WEEK){
+        alerts.push({
+          lvl:'urgent', icon:'⚠️',
+          name: ini.name,
+          sub: `Iniciativa · Vence el ${fmtDate(iniEnd)}`,
+          badge: `${Math.ceil(diff/86400000)} días`,
+          color: ini.color || '#3D5A7A'
+        });
+      } else if(diff <= TWOWEEKS){
+        alerts.push({
+          lvl:'soon', icon:'🔔',
+          name: ini.name,
+          sub: `Iniciativa · Vence el ${fmtDate(iniEnd)}`,
+          badge: `${Math.ceil(diff/86400000)} días`,
+          color: ini.color || '#3D5A7A'
+        });
+      }
+    }
+
+    // ── Subtask end dates ──
+    (ini.subtasks||[]).forEach(s => {
+      if(s.progress === 100) return; // already done
+      const sEnd = subEndDate(s.endDate);
+      if(!sEnd) return;
+      const diff = sEnd - today;
+      if(diff < 0){
+        alerts.push({
+          lvl:'overdue', icon:'🚨',
+          name: s.title || 'Subtarea sin nombre',
+          sub: `Subtarea de: ${ini.name}${s.owner ? ' · ' + s.owner : ''} · Venció el ${fmtDate(sEnd)}`,
+          badge: 'VENCIDA',
+          color: ini.color || '#3D5A7A'
+        });
+      } else if(diff <= WEEK){
+        alerts.push({
+          lvl:'urgent', icon:'⚠️',
+          name: s.title || 'Subtarea sin nombre',
+          sub: `Subtarea de: ${ini.name}${s.owner ? ' · ' + s.owner : ''} · Vence el ${fmtDate(sEnd)}`,
+          badge: `${Math.ceil(diff/86400000)} días`,
+          color: ini.color || '#3D5A7A'
+        });
+      } else if(diff <= TWOWEEKS){
+        alerts.push({
+          lvl:'soon', icon:'🔔',
+          name: s.title || 'Subtarea sin nombre',
+          sub: `Subtarea de: ${ini.name}${s.owner ? ' · ' + s.owner : ''} · Vence el ${fmtDate(sEnd)}`,
+          badge: `${Math.ceil(diff/86400000)} días`,
+          color: ini.color || '#3D5A7A'
+        });
+      }
+    });
+  });
+
+  // Sort: overdue first, then urgent, then soon
+  const order = {overdue:0, urgent:1, soon:2};
+  alerts.sort((a,b) => order[a.lvl] - order[b.lvl]);
+
+  if(!alerts.length){
+    panel.classList.remove('has-alerts');
+    return;
+  }
+
+  panel.classList.add('has-alerts');
+  count.textContent = `${alerts.length} alerta${alerts.length>1?'s':''}`;
+
+  grid.innerHTML = alerts.map(a => `
+    <div class="alert-card lvl-${a.lvl}">
+      <div class="alert-icon">${a.icon}</div>
+      <div class="alert-body">
+        <div class="alert-name">${esc(a.name)}</div>
+        <div class="alert-sub">${esc(a.sub)}</div>
+        <span class="alert-badge">${a.lvl==='overdue'?'⛔ VENCIDA':a.lvl==='urgent'?'⚠️ Vence en '+a.badge:'🔔 Vence en '+a.badge}</span>
+      </div>
+    </div>`).join('');
+}
+
+function fmtDate(d){
+  return `${String(d.getDate()).padStart(2,'0')} ${MOS[d.getMonth()]} ${d.getFullYear()}`;
+}
+
+function dismissAlerts(){
+  alertsDismissed = true;
+  document.getElementById('alert-panel').classList.remove('has-alerts');
+}
+
+// ── MISC ────────────────────────────────────────────────
+function toast(msg){
+  const t=document.getElementById('toast');
+  document.getElementById('toast-msg').textContent=msg;
+  t.classList.add('show'); clearTimeout(t._t);
+  t._t=setTimeout(()=>t.classList.remove('show'),2400);
+}
+function fmt(s){if(!s)return'—';const[y,m]=s.split('-');return`${MOS[parseInt(m)-1]} ${y}`;}
+function esc(s){return(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+
+function refreshDashboard(){
+  const btn=document.querySelector('.btn-p'); btn.disabled=true;
+  alertsDismissed = false; // re-show alerts on manual refresh
+  load(); renderAll(); setTimeout(()=>btn.disabled=false,400);
+  toast('Dashboard actualizado');
+}
+
+function renderAll(){renderKPIs();renderGantt();renderCards();renderSubPanel();renderAlerts();}
+
+document.getElementById('mov').addEventListener('click',e=>{if(e.target===document.getElementById('mov'))closeModal();});
+
+load();
+renderAll();
+</script>
+</body>
+</html>
